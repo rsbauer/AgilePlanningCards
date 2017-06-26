@@ -7,13 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D82D0C5457D56752A4199B8 /* Pods_AgilePoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBF32C205FBC7283018847D /* Pods_AgilePoker.framework */; };
+		620B08BABCC6985579A9328B /* Pods_AgilePokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF84A58985C853C1E0E15B7 /* Pods_AgilePokerUITests.framework */; };
 		664C58441EFED185007C5085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664C58431EFED185007C5085 /* AppDelegate.swift */; };
-		664C58461EFED185007C5085 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664C58451EFED185007C5085 /* ViewController.swift */; };
-		664C58491EFED185007C5085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664C58471EFED185007C5085 /* Main.storyboard */; };
 		664C584B1EFED185007C5085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 664C584A1EFED185007C5085 /* Assets.xcassets */; };
-		664C584E1EFED185007C5085 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664C584C1EFED185007C5085 /* LaunchScreen.storyboard */; };
 		664C58591EFED185007C5085 /* AgilePokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664C58581EFED185007C5085 /* AgilePokerTests.swift */; };
 		664C58641EFED185007C5085 /* AgilePokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664C58631EFED185007C5085 /* AgilePokerUITests.swift */; };
+		664C587A1EFED214007C5085 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664C58781EFED214007C5085 /* MainViewController.swift */; };
+		664C587B1EFED214007C5085 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 664C58791EFED214007C5085 /* MainViewController.xib */; };
+		666FD5561EFF2D0700D18DBD /* PlayingCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FD5541EFF2D0700D18DBD /* PlayingCardCollectionViewCell.swift */; };
+		666FD5571EFF2D0700D18DBD /* PlayingCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666FD5551EFF2D0700D18DBD /* PlayingCardCollectionViewCell.xib */; };
+		666FD55A1EFF2ECC00D18DBD /* CircularCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FD5591EFF2ECC00D18DBD /* CircularCollectionViewLayout.swift */; };
+		666FD55E1EFF2F6B00D18DBD /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FD55C1EFF2F6B00D18DBD /* LaunchScreenViewController.swift */; };
+		666FD55F1EFF2F6B00D18DBD /* LaunchScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666FD55D1EFF2F6B00D18DBD /* LaunchScreenViewController.xib */; };
+		666FD5611EFF312900D18DBD /* CircularCollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FD5601EFF312900D18DBD /* CircularCollectionViewLayoutAttributes.swift */; };
+		666FD5631EFF437100D18DBD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666FD5621EFF437100D18DBD /* Media.xcassets */; };
+		666FD5651EFF4CB700D18DBD /* Decks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666FD5641EFF4CB700D18DBD /* Decks.plist */; };
+		666FD5671EFF4DC400D18DBD /* Fibonacci.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666FD5661EFF4DC400D18DBD /* Fibonacci.plist */; };
+		666FD5691EFF4DD700D18DBD /* TShirt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666FD5681EFF4DD700D18DBD /* TShirt.plist */; };
+		666FD56B1EFF4DE700D18DBD /* Pivotal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666FD56A1EFF4DE700D18DBD /* Pivotal.plist */; };
+		666FD56D1EFF4EEC00D18DBD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FD56C1EFF4EEC00D18DBD /* Card.swift */; };
+		66AFF5011F0012720025A5FD /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFF4FF1F0012720025A5FD /* CardViewController.swift */; };
+		66AFF5021F0012720025A5FD /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AFF5001F0012720025A5FD /* CardViewController.xib */; };
+		7FD5DB2D226A876D0F2EF896 /* Pods_AgilePokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECDD25B46B39BFBEDAABCCF /* Pods_AgilePokerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D04A4AC26B09DC467861D2A /* Pods-AgilePokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgilePokerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgilePokerUITests/Pods-AgilePokerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2B58F6D3FAC1B3EC7588A52B /* Pods-AgilePoker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgilePoker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgilePoker/Pods-AgilePoker.debug.xcconfig"; sourceTree = "<group>"; };
 		664C58401EFED185007C5085 /* AgilePoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgilePoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		664C58431EFED185007C5085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		664C58451EFED185007C5085 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		664C58481EFED185007C5085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		664C584A1EFED185007C5085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		664C584D1EFED185007C5085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		664C584F1EFED185007C5085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		664C58541EFED185007C5085 /* AgilePokerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgilePokerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664C58581EFED185007C5085 /* AgilePokerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgilePokerTests.swift; sourceTree = "<group>"; };
@@ -47,6 +62,29 @@
 		664C585F1EFED185007C5085 /* AgilePokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgilePokerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664C58631EFED185007C5085 /* AgilePokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgilePokerUITests.swift; sourceTree = "<group>"; };
 		664C58651EFED185007C5085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		664C58781EFED214007C5085 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
+		664C58791EFED214007C5085 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = ViewControllers/MainViewController.xib; sourceTree = "<group>"; };
+		666FD5541EFF2D0700D18DBD /* PlayingCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayingCardCollectionViewCell.swift; path = Views/CollectionViewCells/PlayingCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		666FD5551EFF2D0700D18DBD /* PlayingCardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayingCardCollectionViewCell.xib; path = Views/CollectionViewCells/PlayingCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		666FD5591EFF2ECC00D18DBD /* CircularCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularCollectionViewLayout.swift; path = Layouts/CircularCollectionViewLayout.swift; sourceTree = "<group>"; };
+		666FD55C1EFF2F6B00D18DBD /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaunchScreenViewController.swift; path = ViewControllers/Launch/LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		666FD55D1EFF2F6B00D18DBD /* LaunchScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenViewController.xib; path = ViewControllers/Launch/LaunchScreenViewController.xib; sourceTree = "<group>"; };
+		666FD5601EFF312900D18DBD /* CircularCollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularCollectionViewLayoutAttributes.swift; path = Layouts/CircularCollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		666FD5621EFF437100D18DBD /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = Assets/Media.xcassets; sourceTree = "<group>"; };
+		666FD5641EFF4CB700D18DBD /* Decks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Decks.plist; path = SupportingFiles/Decks.plist; sourceTree = "<group>"; };
+		666FD5661EFF4DC400D18DBD /* Fibonacci.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Fibonacci.plist; path = SupportingFiles/Fibonacci.plist; sourceTree = "<group>"; };
+		666FD5681EFF4DD700D18DBD /* TShirt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TShirt.plist; path = SupportingFiles/TShirt.plist; sourceTree = "<group>"; };
+		666FD56A1EFF4DE700D18DBD /* Pivotal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Pivotal.plist; path = SupportingFiles/Pivotal.plist; sourceTree = "<group>"; };
+		666FD56C1EFF4EEC00D18DBD /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Models/Card.swift; sourceTree = "<group>"; };
+		66AFF4FF1F0012720025A5FD /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardViewController.swift; path = ViewControllers/CardViewController.swift; sourceTree = "<group>"; };
+		66AFF5001F0012720025A5FD /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardViewController.xib; path = ViewControllers/CardViewController.xib; sourceTree = "<group>"; };
+		6BF84A58985C853C1E0E15B7 /* Pods_AgilePokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgilePokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		700FEB4F4C89FE0B3E114BE2 /* Pods-AgilePokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgilePokerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgilePokerTests/Pods-AgilePokerTests.release.xcconfig"; sourceTree = "<group>"; };
+		AECDD25B46B39BFBEDAABCCF /* Pods_AgilePokerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgilePokerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE464973CAD899AB384DA3B /* Pods-AgilePokerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgilePokerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgilePokerTests/Pods-AgilePokerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEBF32C205FBC7283018847D /* Pods_AgilePoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgilePoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D181315EC8005F506F4DFE70 /* Pods-AgilePoker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgilePoker.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgilePoker/Pods-AgilePoker.release.xcconfig"; sourceTree = "<group>"; };
+		EA2FD15A496A9B03737D3654 /* Pods-AgilePokerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgilePokerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgilePokerUITests/Pods-AgilePokerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D82D0C5457D56752A4199B8 /* Pods_AgilePoker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD5DB2D226A876D0F2EF896 /* Pods_AgilePokerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +108,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				620B08BABCC6985579A9328B /* Pods_AgilePokerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		415743CAB3C685071B36F2A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B58F6D3FAC1B3EC7588A52B /* Pods-AgilePoker.debug.xcconfig */,
+				D181315EC8005F506F4DFE70 /* Pods-AgilePoker.release.xcconfig */,
+				BDE464973CAD899AB384DA3B /* Pods-AgilePokerTests.debug.xcconfig */,
+				700FEB4F4C89FE0B3E114BE2 /* Pods-AgilePokerTests.release.xcconfig */,
+				EA2FD15A496A9B03737D3654 /* Pods-AgilePokerUITests.debug.xcconfig */,
+				0D04A4AC26B09DC467861D2A /* Pods-AgilePokerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		664C58371EFED185007C5085 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +135,8 @@
 				664C58571EFED185007C5085 /* AgilePokerTests */,
 				664C58621EFED185007C5085 /* AgilePokerUITests */,
 				664C58411EFED185007C5085 /* Products */,
+				415743CAB3C685071B36F2A2 /* Pods */,
+				AFF4CBD9F57667880615EE07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +153,15 @@
 		664C58421EFED185007C5085 /* AgilePoker */ = {
 			isa = PBXGroup;
 			children = (
+				666FD5581EFF2EAA00D18DBD /* Layouts */,
+				664C58771EFED1C8007C5085 /* Storyboards */,
+				664C58761EFED1BC007C5085 /* Assets */,
+				664C58751EFED1B0007C5085 /* Supporting Files */,
+				664C58741EFED1A8007C5085 /* Models */,
+				664C58731EFED1A3007C5085 /* Helpers */,
+				664C58721EFED19E007C5085 /* Views */,
+				664C58711EFED195007C5085 /* ViewControllers */,
 				664C58431EFED185007C5085 /* AppDelegate.swift */,
-				664C58451EFED185007C5085 /* ViewController.swift */,
-				664C58471EFED185007C5085 /* Main.storyboard */,
-				664C584A1EFED185007C5085 /* Assets.xcassets */,
-				664C584C1EFED185007C5085 /* LaunchScreen.storyboard */,
-				664C584F1EFED185007C5085 /* Info.plist */,
 			);
 			path = AgilePoker;
 			sourceTree = "<group>";
@@ -125,6 +184,106 @@
 			path = AgilePokerUITests;
 			sourceTree = "<group>";
 		};
+		664C58711EFED195007C5085 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				666FD55B1EFF2F4D00D18DBD /* Launch */,
+				664C58781EFED214007C5085 /* MainViewController.swift */,
+				664C58791EFED214007C5085 /* MainViewController.xib */,
+				66AFF4FF1F0012720025A5FD /* CardViewController.swift */,
+				66AFF5001F0012720025A5FD /* CardViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		664C58721EFED19E007C5085 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				666FD5531EFF2CDC00D18DBD /* CollectionViewCells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		664C58731EFED1A3007C5085 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		664C58741EFED1A8007C5085 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				666FD56C1EFF4EEC00D18DBD /* Card.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		664C58751EFED1B0007C5085 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				664C584F1EFED185007C5085 /* Info.plist */,
+				666FD5641EFF4CB700D18DBD /* Decks.plist */,
+				666FD5661EFF4DC400D18DBD /* Fibonacci.plist */,
+				666FD5681EFF4DD700D18DBD /* TShirt.plist */,
+				666FD56A1EFF4DE700D18DBD /* Pivotal.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		664C58761EFED1BC007C5085 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				664C584A1EFED185007C5085 /* Assets.xcassets */,
+				666FD5621EFF437100D18DBD /* Media.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		664C58771EFED1C8007C5085 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		666FD5531EFF2CDC00D18DBD /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				666FD5541EFF2D0700D18DBD /* PlayingCardCollectionViewCell.swift */,
+				666FD5551EFF2D0700D18DBD /* PlayingCardCollectionViewCell.xib */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		666FD5581EFF2EAA00D18DBD /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				666FD5591EFF2ECC00D18DBD /* CircularCollectionViewLayout.swift */,
+				666FD5601EFF312900D18DBD /* CircularCollectionViewLayoutAttributes.swift */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+		666FD55B1EFF2F4D00D18DBD /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				666FD55C1EFF2F6B00D18DBD /* LaunchScreenViewController.swift */,
+				666FD55D1EFF2F6B00D18DBD /* LaunchScreenViewController.xib */,
+			);
+			name = Launch;
+			sourceTree = "<group>";
+		};
+		AFF4CBD9F57667880615EE07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEBF32C205FBC7283018847D /* Pods_AgilePoker.framework */,
+				AECDD25B46B39BFBEDAABCCF /* Pods_AgilePokerTests.framework */,
+				6BF84A58985C853C1E0E15B7 /* Pods_AgilePokerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +291,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 664C58681EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePoker" */;
 			buildPhases = (
+				95282A78D4C6E1A0D358F3A2 /* [CP] Check Pods Manifest.lock */,
 				664C583C1EFED185007C5085 /* Sources */,
 				664C583D1EFED185007C5085 /* Frameworks */,
 				664C583E1EFED185007C5085 /* Resources */,
+				F2C567F86CBC97A6EBD41922 /* [CP] Embed Pods Frameworks */,
+				2AC2616253D1D17AABCA0F88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +311,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 664C586B1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePokerTests" */;
 			buildPhases = (
+				C576AAC8C37EDE96AA4E3BC3 /* [CP] Check Pods Manifest.lock */,
 				664C58501EFED185007C5085 /* Sources */,
 				664C58511EFED185007C5085 /* Frameworks */,
 				664C58521EFED185007C5085 /* Resources */,
+				1E14C8696E4518694B0CB147 /* [CP] Embed Pods Frameworks */,
+				D8572AE383813803A6513FCE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +332,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 664C586E1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePokerUITests" */;
 			buildPhases = (
+				E5BAA88C9293EDD75F161B3C /* [CP] Check Pods Manifest.lock */,
 				664C585B1EFED185007C5085 /* Sources */,
 				664C585C1EFED185007C5085 /* Frameworks */,
 				664C585D1EFED185007C5085 /* Resources */,
+				7B115B129BB9ED0C394F29BA /* [CP] Embed Pods Frameworks */,
+				5CC2A09E9A839D950DFBC496 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,9 +403,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				664C584E1EFED185007C5085 /* LaunchScreen.storyboard in Resources */,
+				666FD5651EFF4CB700D18DBD /* Decks.plist in Resources */,
+				666FD5631EFF437100D18DBD /* Media.xcassets in Resources */,
 				664C584B1EFED185007C5085 /* Assets.xcassets in Resources */,
-				664C58491EFED185007C5085 /* Main.storyboard in Resources */,
+				666FD5671EFF4DC400D18DBD /* Fibonacci.plist in Resources */,
+				666FD5691EFF4DD700D18DBD /* TShirt.plist in Resources */,
+				666FD55F1EFF2F6B00D18DBD /* LaunchScreenViewController.xib in Resources */,
+				666FD5571EFF2D0700D18DBD /* PlayingCardCollectionViewCell.xib in Resources */,
+				664C587B1EFED214007C5085 /* MainViewController.xib in Resources */,
+				66AFF5021F0012720025A5FD /* CardViewController.xib in Resources */,
+				666FD56B1EFF4DE700D18DBD /* Pivotal.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +432,157 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E14C8696E4518694B0CB147 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AgilePokerTests/Pods-AgilePokerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AC2616253D1D17AABCA0F88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AgilePoker/Pods-AgilePoker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CC2A09E9A839D950DFBC496 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AgilePokerUITests/Pods-AgilePokerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B115B129BB9ED0C394F29BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AgilePokerUITests/Pods-AgilePokerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95282A78D4C6E1A0D358F3A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C576AAC8C37EDE96AA4E3BC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D8572AE383813803A6513FCE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AgilePokerTests/Pods-AgilePokerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5BAA88C9293EDD75F161B3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F2C567F86CBC97A6EBD41922 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AgilePoker/Pods-AgilePoker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		664C583C1EFED185007C5085 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				664C58461EFED185007C5085 /* ViewController.swift in Sources */,
+				666FD5611EFF312900D18DBD /* CircularCollectionViewLayoutAttributes.swift in Sources */,
+				664C587A1EFED214007C5085 /* MainViewController.swift in Sources */,
+				666FD56D1EFF4EEC00D18DBD /* Card.swift in Sources */,
 				664C58441EFED185007C5085 /* AppDelegate.swift in Sources */,
+				66AFF5011F0012720025A5FD /* CardViewController.swift in Sources */,
+				666FD5561EFF2D0700D18DBD /* PlayingCardCollectionViewCell.swift in Sources */,
+				666FD55E1EFF2F6B00D18DBD /* LaunchScreenViewController.swift in Sources */,
+				666FD55A1EFF2ECC00D18DBD /* CircularCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,25 +616,6 @@
 			targetProxy = 664C58601EFED185007C5085 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		664C58471EFED185007C5085 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				664C58481EFED185007C5085 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		664C584C1EFED185007C5085 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				664C584D1EFED185007C5085 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		664C58661EFED185007C5085 /* Debug */ = {
@@ -415,6 +715,7 @@
 		};
 		664C58691EFED185007C5085 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B58F6D3FAC1B3EC7588A52B /* Pods-AgilePoker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AAG9GT5WNC;
@@ -428,6 +729,7 @@
 		};
 		664C586A1EFED185007C5085 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D181315EC8005F506F4DFE70 /* Pods-AgilePoker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AAG9GT5WNC;
@@ -441,6 +743,7 @@
 		};
 		664C586C1EFED185007C5085 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDE464973CAD899AB384DA3B /* Pods-AgilePokerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +759,7 @@
 		};
 		664C586D1EFED185007C5085 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 700FEB4F4C89FE0B3E114BE2 /* Pods-AgilePokerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +775,7 @@
 		};
 		664C586F1EFED185007C5085 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA2FD15A496A9B03737D3654 /* Pods-AgilePokerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = AAG9GT5WNC;
@@ -485,6 +790,7 @@
 		};
 		664C58701EFED185007C5085 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D04A4AC26B09DC467861D2A /* Pods-AgilePokerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = AAG9GT5WNC;
@@ -516,6 +822,7 @@
 				664C586A1EFED185007C5085 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		664C586B1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePokerTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +831,7 @@
 				664C586D1EFED185007C5085 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		664C586E1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePokerUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +840,7 @@
 				664C58701EFED185007C5085 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

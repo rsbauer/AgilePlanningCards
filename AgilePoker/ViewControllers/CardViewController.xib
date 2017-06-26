@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModule="AgilePoker" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundImage" destination="U4h-QH-IDT" id="ktn-kY-Wcf"/>
+                <outlet property="bottomRightLabel" destination="acT-no-tiZ" id="tMy-8a-u5C"/>
+                <outlet property="cardView" destination="eTd-HH-Hnh" id="gLp-9s-eAZ"/>
+                <outlet property="topLeftLabel" destination="Zlf-G2-LXD" id="JVw-yP-UTz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_redfelt" translatesAutoresizingMaskIntoConstraints="NO" id="U4h-QH-IDT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTd-HH-Hnh">
+                    <rect key="frame" x="16" y="93" width="343" height="480"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="½" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlf-G2-LXD">
+                            <rect key="frame" x="16" y="8" width="72" height="88"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="72"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acT-no-tiZ">
+                            <rect key="frame" x="235" y="384" width="92" height="88"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="72"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Zlf-G2-LXD" firstAttribute="leading" secondItem="eTd-HH-Hnh" secondAttribute="leading" constant="16" id="8RG-jU-No1"/>
+                        <constraint firstAttribute="width" secondItem="eTd-HH-Hnh" secondAttribute="height" multiplier="343:480" id="8Uq-Id-uqb"/>
+                        <constraint firstAttribute="trailing" secondItem="acT-no-tiZ" secondAttribute="trailing" constant="16" id="GFL-di-H3A"/>
+                        <constraint firstAttribute="bottom" secondItem="acT-no-tiZ" secondAttribute="bottom" constant="8" id="klo-Uv-lsK"/>
+                        <constraint firstItem="Zlf-G2-LXD" firstAttribute="top" secondItem="eTd-HH-Hnh" secondAttribute="top" constant="8" id="qzj-Q1-LK5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eTd-HH-Hnh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0nq-gf-BdP"/>
+                <constraint firstAttribute="bottom" secondItem="eTd-HH-Hnh" secondAttribute="bottom" constant="94" id="IYt-os-ch9"/>
+                <constraint firstAttribute="trailing" secondItem="U4h-QH-IDT" secondAttribute="trailing" id="NIy-uC-3cD"/>
+                <constraint firstItem="U4h-QH-IDT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OWh-r0-cZU"/>
+                <constraint firstItem="eTd-HH-Hnh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="93" id="TXb-TS-qMc"/>
+                <constraint firstAttribute="trailing" secondItem="eTd-HH-Hnh" secondAttribute="trailing" constant="16" id="VPr-Hc-tDk"/>
+                <constraint firstItem="eTd-HH-Hnh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="exh-mJ-SSe"/>
+                <constraint firstAttribute="bottom" secondItem="U4h-QH-IDT" secondAttribute="bottom" id="lKZ-Jr-np6"/>
+                <constraint firstItem="eTd-HH-Hnh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lgk-Ml-VZC"/>
+                <constraint firstItem="U4h-QH-IDT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nZj-3S-xax"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_redfelt" width="1604" height="1920"/>
+    </resources>
+</document>

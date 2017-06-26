@@ -1,0 +1,22 @@
+PODS:
+  - CocoaLumberjack/Default (3.1.0)
+  - CocoaLumberjack/Swift (3.1.0):
+    - CocoaLumberjack/Default
+  - IndefiniteObservable (4.0.0):
+    - IndefiniteObservable/lib (= 4.0.0)
+  - IndefiniteObservable/lib (4.0.0)
+  - MaterialMotion (2.0.0):
+    - IndefiniteObservable (~> 4.0)
+
+DEPENDENCIES:
+  - CocoaLumberjack/Swift
+  - MaterialMotion
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 8311463ddf9ee86a06ef92a071dd656c89244500
+  IndefiniteObservable: 1ee6af37efa8763a222cc6d414cd125e26ed9b6a
+  MaterialMotion: a0532ef7bc01f3592fc41e09fcc04bdb7939839e
+
+PODFILE CHECKSUM: ae7f1e728232f7322b8c2f1866ab7b235dd1cc22
+
+COCOAPODS: 1.2.0
