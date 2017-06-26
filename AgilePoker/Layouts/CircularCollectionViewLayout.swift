@@ -13,7 +13,7 @@ import CocoaLumberjack
 
 class CircularCollectionViewLayout: UICollectionViewLayout {
     let itemSize = CGSize(width: 200, height: 280)      // ratio is 1.4 so height = width * 1.4
-    let verticleOffset: CGFloat = 25.0
+    let verticalOffset: CGFloat = 25.0
     let cardSpacing: CGFloat = 0.0
     
     var angleAtExtreme: CGFloat {
@@ -94,7 +94,7 @@ class CircularCollectionViewLayout: UICollectionViewLayout {
             attributes.size = self.itemSize
             
             // position each item at the center of the screen
-            attributes.center = CGPoint(x: centerX, y: self.collectionView!.bounds.midY + verticleOffset)
+            attributes.center = CGPoint(x: centerX, y: self.collectionView!.bounds.midY + verticalOffset)
             
             // rotate each item
             attributes.angle = self.angle + (self.anglePerItem * CGFloat(i))
