@@ -30,8 +30,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTd-HH-Hnh">
                     <rect key="frame" x="16" y="93" width="343" height="480"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="½" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlf-G2-LXD">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="½" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlf-G2-LXD">
                             <rect key="frame" x="16" y="8" width="72" height="88"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="72"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -45,26 +46,22 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="Zlf-G2-LXD" firstAttribute="leading" secondItem="eTd-HH-Hnh" secondAttribute="leading" constant="16" id="8RG-jU-No1"/>
-                        <constraint firstAttribute="width" secondItem="eTd-HH-Hnh" secondAttribute="height" multiplier="343:480" id="8Uq-Id-uqb"/>
-                        <constraint firstAttribute="trailing" secondItem="acT-no-tiZ" secondAttribute="trailing" constant="16" id="GFL-di-H3A"/>
-                        <constraint firstAttribute="bottom" secondItem="acT-no-tiZ" secondAttribute="bottom" constant="8" id="klo-Uv-lsK"/>
-                        <constraint firstItem="Zlf-G2-LXD" firstAttribute="top" secondItem="eTd-HH-Hnh" secondAttribute="top" constant="8" id="qzj-Q1-LK5"/>
+                        <constraint firstAttribute="width" secondItem="eTd-HH-Hnh" secondAttribute="height" multiplier="343:480" id="bq3-mj-2xY"/>
+                        <constraint firstAttribute="trailing" secondItem="acT-no-tiZ" secondAttribute="trailing" constant="16" id="osk-V3-puu"/>
+                        <constraint firstAttribute="bottom" secondItem="acT-no-tiZ" secondAttribute="bottom" constant="8" id="uqA-Lr-Bcu"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="eTd-HH-Hnh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0nq-gf-BdP"/>
-                <constraint firstAttribute="bottom" secondItem="eTd-HH-Hnh" secondAttribute="bottom" constant="94" id="IYt-os-ch9"/>
+                <constraint firstItem="eTd-HH-Hnh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="9tO-oN-Sde"/>
                 <constraint firstAttribute="trailing" secondItem="U4h-QH-IDT" secondAttribute="trailing" id="NIy-uC-3cD"/>
                 <constraint firstItem="U4h-QH-IDT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OWh-r0-cZU"/>
-                <constraint firstItem="eTd-HH-Hnh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="93" id="TXb-TS-qMc"/>
-                <constraint firstAttribute="trailing" secondItem="eTd-HH-Hnh" secondAttribute="trailing" constant="16" id="VPr-Hc-tDk"/>
-                <constraint firstItem="eTd-HH-Hnh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="exh-mJ-SSe"/>
+                <constraint firstItem="eTd-HH-Hnh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bpd-iZ-zx2"/>
+                <constraint firstAttribute="bottom" secondItem="eTd-HH-Hnh" secondAttribute="bottom" constant="94" id="joG-nC-kgA"/>
                 <constraint firstAttribute="bottom" secondItem="U4h-QH-IDT" secondAttribute="bottom" id="lKZ-Jr-np6"/>
-                <constraint firstItem="eTd-HH-Hnh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lgk-Ml-VZC"/>
                 <constraint firstItem="U4h-QH-IDT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nZj-3S-xax"/>
+                <constraint firstItem="eTd-HH-Hnh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="93" id="obp-rU-FlJ"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
