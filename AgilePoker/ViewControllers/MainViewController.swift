@@ -73,7 +73,7 @@ class MainViewController: UIViewController, TransitionContextViewRetriever {
         
         // top right
         actionButton.layer.position = .init(x: view.bounds.width - actionButton.bounds.width / 2 - 24,
-                                            y: 150)
+                                            y: 44 + (actionButton.bounds.height / 2))
         
         actionButton.autoresizingMask = [.flexibleLeftMargin, .flexibleTopMargin]
         actionButton.layer.shadowOpacity = 0.5
