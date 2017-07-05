@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="AgilePoker" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundCollectionView" destination="ELK-1M-dQt" id="BOr-PK-0P9"/>
+                <outlet property="deckPicker" destination="PMY-Yh-7dR" id="uup-cu-PRx"/>
+                <outlet property="scrollView" destination="2un-n2-tLm" id="GBW-AE-Hlg"/>
+                <outlet property="settingsView" destination="7ap-cT-Ovz" id="6AQ-gD-XLN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +22,79 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2un-n2-tLm">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" red="0.035294117647058823" green="0.44313725490196076" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2un-n2-tLm" secondAttribute="trailing" id="9tw-zg-1LF"/>
+                <constraint firstItem="2un-n2-tLm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Esz-xt-JdX"/>
+                <constraint firstItem="2un-n2-tLm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oT6-8n-kde"/>
+                <constraint firstAttribute="bottom" secondItem="2un-n2-tLm" secondAttribute="bottom" id="oee-LB-fiG"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="7ap-cT-Ovz">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOz-tt-3S3">
+                    <rect key="frame" x="16" y="20" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="99a-x4-kv0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd6-Kd-lAw">
+                    <rect key="frame" x="16" y="273" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Jd6-kv-MrI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMY-Yh-7dR">
+                    <rect key="frame" x="0.0" y="49" width="375" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="ndP-cJ-Ub4"/>
+                    </constraints>
+                </pickerView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ELK-1M-dQt">
+                    <rect key="frame" x="16" y="302" width="343" height="180"/>
+                    <color key="backgroundColor" red="0.035294117649999998" green="0.4431372549" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="aPj-HZ-m7U"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lxb-St-ZNT">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="0.035294117649999998" green="0.4431372549" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ELK-1M-dQt" firstAttribute="top" secondItem="Sd6-Kd-lAw" secondAttribute="bottom" constant="8" id="0jN-Jl-Zvm"/>
+                <constraint firstAttribute="trailing" secondItem="ELK-1M-dQt" secondAttribute="trailing" constant="16" id="3Wq-Yz-urQ"/>
+                <constraint firstItem="Sd6-Kd-lAw" firstAttribute="leading" secondItem="7ap-cT-Ovz" secondAttribute="leading" constant="16" id="CzV-F0-rwf"/>
+                <constraint firstAttribute="trailing" secondItem="Sd6-Kd-lAw" secondAttribute="trailing" constant="16" id="EbU-z2-Hr1"/>
+                <constraint firstItem="PMY-Yh-7dR" firstAttribute="leading" secondItem="7ap-cT-Ovz" secondAttribute="leading" id="PxV-Xj-95S"/>
+                <constraint firstItem="YOz-tt-3S3" firstAttribute="leading" secondItem="7ap-cT-Ovz" secondAttribute="leading" constant="16" id="U6R-8N-Xd2"/>
+                <constraint firstItem="ELK-1M-dQt" firstAttribute="leading" secondItem="7ap-cT-Ovz" secondAttribute="leading" constant="16" id="XeB-3a-kKj"/>
+                <constraint firstItem="PMY-Yh-7dR" firstAttribute="top" secondItem="YOz-tt-3S3" secondAttribute="bottom" constant="8" id="eUT-Vl-gS6"/>
+                <constraint firstItem="Sd6-Kd-lAw" firstAttribute="top" secondItem="PMY-Yh-7dR" secondAttribute="bottom" constant="8" id="eZD-1J-3YA"/>
+                <constraint firstAttribute="trailing" secondItem="PMY-Yh-7dR" secondAttribute="trailing" id="ewi-gf-dEF"/>
+                <constraint firstAttribute="trailing" secondItem="YOz-tt-3S3" secondAttribute="trailing" constant="16" id="tGb-yp-bHI"/>
+                <constraint firstItem="YOz-tt-3S3" firstAttribute="top" secondItem="7ap-cT-Ovz" secondAttribute="top" constant="20" id="xya-H5-hmQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="502.5" y="-2.5"/>
         </view>
     </objects>
 </document>

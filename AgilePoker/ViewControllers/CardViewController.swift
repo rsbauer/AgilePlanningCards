@@ -31,6 +31,7 @@ class CardViewController: MaterialMotion.UIViewController, UIGestureRecognizerDe
     }
 
     var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

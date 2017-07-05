@@ -31,6 +31,11 @@
 		666FD5691EFF4DD700D18DBD /* TShirt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666FD5681EFF4DD700D18DBD /* TShirt.plist */; };
 		666FD56B1EFF4DE700D18DBD /* Pivotal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666FD56A1EFF4DE700D18DBD /* Pivotal.plist */; };
 		666FD56D1EFF4EEC00D18DBD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FD56C1EFF4EEC00D18DBD /* Card.swift */; };
+		66785EC71F0C6AC600A5DEB3 /* MessageBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66785EC61F0C6AC600A5DEB3 /* MessageBroker.swift */; };
+		66785ECA1F0C6B0300A5DEB3 /* SettingsMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66785EC91F0C6B0300A5DEB3 /* SettingsMessage.swift */; };
+		66785ECC1F0C76FE00A5DEB3 /* AppBackgroundImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66785ECB1F0C76FE00A5DEB3 /* AppBackgroundImages.plist */; };
+		66785ED11F0C785600A5DEB3 /* BackgroundImageSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66785ECF1F0C785600A5DEB3 /* BackgroundImageSettingCollectionViewCell.swift */; };
+		66785ED21F0C785600A5DEB3 /* BackgroundImageSettingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66785ED01F0C785600A5DEB3 /* BackgroundImageSettingCollectionViewCell.xib */; };
 		66AFF5011F0012720025A5FD /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFF4FF1F0012720025A5FD /* CardViewController.swift */; };
 		66AFF5021F0012720025A5FD /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AFF5001F0012720025A5FD /* CardViewController.xib */; };
 		7FD5DB2D226A876D0F2EF896 /* Pods_AgilePokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECDD25B46B39BFBEDAABCCF /* Pods_AgilePokerTests.framework */; };
@@ -84,6 +89,11 @@
 		666FD5681EFF4DD700D18DBD /* TShirt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TShirt.plist; path = SupportingFiles/TShirt.plist; sourceTree = "<group>"; };
 		666FD56A1EFF4DE700D18DBD /* Pivotal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Pivotal.plist; path = SupportingFiles/Pivotal.plist; sourceTree = "<group>"; };
 		666FD56C1EFF4EEC00D18DBD /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Models/Card.swift; sourceTree = "<group>"; };
+		66785EC61F0C6AC600A5DEB3 /* MessageBroker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageBroker.swift; path = Helpers/MessageBroker.swift; sourceTree = "<group>"; };
+		66785EC91F0C6B0300A5DEB3 /* SettingsMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsMessage.swift; path = Models/MessageBrokerModels/SettingsMessage.swift; sourceTree = "<group>"; };
+		66785ECB1F0C76FE00A5DEB3 /* AppBackgroundImages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppBackgroundImages.plist; path = SupportingFiles/AppBackgroundImages.plist; sourceTree = "<group>"; };
+		66785ECF1F0C785600A5DEB3 /* BackgroundImageSettingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundImageSettingCollectionViewCell.swift; path = Views/CollectionViewCells/BackgroundImageSettingCollectionViewCell.swift; sourceTree = "<group>"; };
+		66785ED01F0C785600A5DEB3 /* BackgroundImageSettingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BackgroundImageSettingCollectionViewCell.xib; path = Views/CollectionViewCells/BackgroundImageSettingCollectionViewCell.xib; sourceTree = "<group>"; };
 		66AFF4FF1F0012720025A5FD /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardViewController.swift; path = ViewControllers/CardViewController.swift; sourceTree = "<group>"; };
 		66AFF5001F0012720025A5FD /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardViewController.xib; path = ViewControllers/CardViewController.xib; sourceTree = "<group>"; };
 		6BF84A58985C853C1E0E15B7 /* Pods_AgilePokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgilePokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				661F391F1F00A77A00CE8D44 /* HexColor.swift */,
+				66785EC61F0C6AC600A5DEB3 /* MessageBroker.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -233,6 +244,7 @@
 		664C58741EFED1A8007C5085 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				66785EC81F0C6AE500A5DEB3 /* MessageBrokerModels */,
 				666FD56C1EFF4EEC00D18DBD /* Card.swift */,
 			);
 			name = Models;
@@ -243,6 +255,7 @@
 			children = (
 				661F39181F00996C00CE8D44 /* Fonts */,
 				664C584F1EFED185007C5085 /* Info.plist */,
+				66785ECB1F0C76FE00A5DEB3 /* AppBackgroundImages.plist */,
 				666FD5641EFF4CB700D18DBD /* Decks.plist */,
 				666FD5661EFF4DC400D18DBD /* Fibonacci.plist */,
 				666FD5681EFF4DD700D18DBD /* TShirt.plist */,
@@ -272,6 +285,8 @@
 			children = (
 				666FD5541EFF2D0700D18DBD /* PlayingCardCollectionViewCell.swift */,
 				666FD5551EFF2D0700D18DBD /* PlayingCardCollectionViewCell.xib */,
+				66785ECF1F0C785600A5DEB3 /* BackgroundImageSettingCollectionViewCell.swift */,
+				66785ED01F0C785600A5DEB3 /* BackgroundImageSettingCollectionViewCell.xib */,
 			);
 			name = CollectionViewCells;
 			sourceTree = "<group>";
@@ -292,6 +307,14 @@
 				666FD55D1EFF2F6B00D18DBD /* LaunchScreenViewController.xib */,
 			);
 			name = Launch;
+			sourceTree = "<group>";
+		};
+		66785EC81F0C6AE500A5DEB3 /* MessageBrokerModels */ = {
+			isa = PBXGroup;
+			children = (
+				66785EC91F0C6B0300A5DEB3 /* SettingsMessage.swift */,
+			);
+			name = MessageBrokerModels;
 			sourceTree = "<group>";
 		};
 		AFF4CBD9F57667880615EE07 /* Frameworks */ = {
@@ -432,8 +455,10 @@
 				666FD55F1EFF2F6B00D18DBD /* LaunchScreenViewController.xib in Resources */,
 				661F391E1F009C3100CE8D44 /* SettingsViewController.xib in Resources */,
 				666FD5571EFF2D0700D18DBD /* PlayingCardCollectionViewCell.xib in Resources */,
+				66785ED21F0C785600A5DEB3 /* BackgroundImageSettingCollectionViewCell.xib in Resources */,
 				664C587B1EFED214007C5085 /* MainViewController.xib in Resources */,
 				66AFF5021F0012720025A5FD /* CardViewController.xib in Resources */,
+				66785ECC1F0C76FE00A5DEB3 /* AppBackgroundImages.plist in Resources */,
 				666FD56B1EFF4DE700D18DBD /* Pivotal.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,7 +631,10 @@
 				666FD55E1EFF2F6B00D18DBD /* LaunchScreenViewController.swift in Sources */,
 				661F39201F00A77A00CE8D44 /* HexColor.swift in Sources */,
 				666FD55A1EFF2ECC00D18DBD /* CircularCollectionViewLayout.swift in Sources */,
+				66785ED11F0C785600A5DEB3 /* BackgroundImageSettingCollectionViewCell.swift in Sources */,
 				661F391D1F009C3100CE8D44 /* SettingsViewController.swift in Sources */,
+				66785ECA1F0C6B0300A5DEB3 /* SettingsMessage.swift in Sources */,
+				66785EC71F0C6AC600A5DEB3 /* MessageBroker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

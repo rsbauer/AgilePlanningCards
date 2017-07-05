@@ -23,11 +23,11 @@ class MainViewController: UIViewController, TransitionContextViewRetriever {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
-    var actionButton: UIButton!
+    @IBOutlet weak var actionButton: UIButton!
 
 
-    let backgroundImageName = "bg_redfelt" // "bg_table" // "bg_redfelt"
-    let deckToLoad = "Fibonacci" // "TShirt" // "Pivotal"
+    var backgroundImageName = "bg_redfelt" // "bg_table" // "bg_redfelt"
+    var deckToLoad = "Fibonacci" // "TShirt" // "Pivotal"
     var deck: [Card] = []
     var selectedIndexPath: IndexPath?
 
@@ -37,15 +37,22 @@ class MainViewController: UIViewController, TransitionContextViewRetriever {
         let nib = UINib(nibName: "PlayingCardCollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "PlayingCardCollectionViewCell")
         
+        let deckIndex = UserDefaults.standard.integer(forKey: SettingsViewController.deckIndexSetting)
+        deckToLoad = findDeckNameFromIndex(deckIndex)
+        
         loadDeck(deckToLoad)
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-//        self.collectionView.isPagingEnabled = true
         
+        let backgroundImageIndex = UserDefaults.standard.integer(forKey: SettingsViewController.backgroundImageIndexSetting)
+        self.backgroundImageName = findImageFromIndex(backgroundImageIndex)
         self.backgroundImage.image = UIImage(named: self.backgroundImageName)
         
         setupSettingsButton()
+        
+        MessageBroker.sharedMessageBroker.subscribe(self, messageKey: SettingsMessage.deckIndexType)
+        MessageBroker.sharedMessageBroker.subscribe(self, messageKey: SettingsMessage.backgroundImageIndexType)
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,8 +65,6 @@ class MainViewController: UIViewController, TransitionContextViewRetriever {
     }
     
     func setupSettingsButton() {
-        actionButton = UIButton(type: .custom)
-        
         actionButton.setTitle("", for: UIControlState.normal)
         actionButton.titleLabel?.font = UIFont(name: "FontAwesome", size: 24)
         actionButton.setTitleColor(UIColor.lightGray, for: .normal)
@@ -67,33 +72,23 @@ class MainViewController: UIViewController, TransitionContextViewRetriever {
         actionButton.backgroundColor = UIColor(hexColor: 0x0971B2)
         actionButton.bounds = .init(x: 0, y: 0, width: 50, height: 50)
         actionButton.layer.cornerRadius = actionButton.bounds.width / 2
-        // bottom right
-//        actionButton.layer.position = .init(x: view.bounds.width - actionButton.bounds.width / 2 - 24,
-//                                            y: view.bounds.height - actionButton.bounds.height / 2 - 24)
-        
-        // top right
-        actionButton.layer.position = .init(x: view.bounds.width - actionButton.bounds.width / 2 - 24,
-                                            y: 44 + (actionButton.bounds.height / 2))
         
         actionButton.autoresizingMask = [.flexibleLeftMargin, .flexibleTopMargin]
         actionButton.layer.shadowOpacity = 0.5
         actionButton.layer.shadowOffset = .init(width: 0, height: 3)
         actionButton.layer.shadowRadius = 2
         actionButton.layer.shadowPath = UIBezierPath(ovalIn: actionButton.bounds).cgPath
-        view.addSubview(actionButton)
         
         actionButton.addTarget(self, action: #selector(didTapSettings), for: .touchUpInside)
     }
     
     func didTapSettings() {
         let settingsViewController = SettingsViewController()
-//        settingsViewController.transitionController.transition = CircularRevealTransition()
         let navigationController = UINavigationController(rootViewController: settingsViewController)
         navigationController.transitionController.transition = CircularRevealTransition()
-        settingsViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(settingsCancel))
+        settingsViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(settingsCancel))
         settingsViewController.title = "Settings"
         present(navigationController, animated: true)
-//        present(settingsViewController, animated: true, completion: nil)
     }
     
     func settingsCancel() {
@@ -128,7 +123,36 @@ class MainViewController: UIViewController, TransitionContextViewRetriever {
         self.collectionView.reloadData()
     }
     
-
+    func findDeckNameFromIndex(_ index: Int) -> String {
+        let array = SettingsViewController.loadDecksPlist()
+        var a = 0
+        for item in array {
+            if a == index {
+                if let name = item["name"] as? String {
+                    return name
+                }
+            }
+            a += 1
+        }
+        
+        return "Fibonacci"
+    }
+    
+    func findImageFromIndex(_ index: Int) -> String {
+        let array = SettingsViewController.loadImagesPlist()
+        var a = 0
+        for item in array {
+            if a == index {
+                if let name = item["image"] as? String {
+                    return name
+                }
+            }
+            a += 1
+        }
+        
+        return "bg_redfelt"
+    }
+    
 }
 
 extension MainViewController: UICollectionViewDataSource {
@@ -276,5 +300,19 @@ private class Hidden: Interaction {
     var hiddenViews = Set<UIView>()
 }
 
-
-
+extension MainViewController: Subscriber {
+    func receive(_ message: Message) {
+        if let settingsMessage = message as? SettingsMessage {
+            switch settingsMessage {
+                case .deckIndex(let index):
+                    deckToLoad = findDeckNameFromIndex(index)
+                    loadDeck(deckToLoad)
+                    self.collectionView.reloadData()
+                
+                case .backgroundImageIndex(let index):
+                    self.backgroundImageName = findImageFromIndex(index)
+                    self.backgroundImage.image = UIImage(named: self.backgroundImageName)
+            }
+        }
+    }
+}

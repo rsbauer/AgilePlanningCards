@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="AgilePoker" customModuleProvider="target">
             <connections>
+                <outlet property="actionButton" destination="pwK-qH-ELa" id="kEo-nd-6Lh"/>
                 <outlet property="backgroundImage" destination="Eu4-fY-KH3" id="sJ7-SI-skp"/>
                 <outlet property="collectionView" destination="K14-Gt-gEq" id="XCr-JX-bXl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,12 +30,22 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewLayout key="collectionViewLayout" id="NQ4-qj-ozO" customClass="CircularCollectionViewLayout" customModule="AgilePoker" customModuleProvider="target"/>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwK-qH-ELa">
+                    <rect key="frame" x="309" y="20" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="LS9-ub-iiA"/>
+                        <constraint firstAttribute="height" constant="50" id="P02-5B-IQ5"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="pwK-qH-ELa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="1A2-DN-uQw"/>
                 <constraint firstAttribute="bottom" secondItem="Eu4-fY-KH3" secondAttribute="bottom" id="3eX-tz-NFr"/>
                 <constraint firstItem="K14-Gt-gEq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cbk-ef-U8v"/>
                 <constraint firstAttribute="trailing" secondItem="K14-Gt-gEq" secondAttribute="trailing" id="Jpe-v2-Cbg"/>
+                <constraint firstAttribute="trailing" secondItem="pwK-qH-ELa" secondAttribute="trailing" constant="16" id="Lhl-bA-mzC"/>
                 <constraint firstItem="Eu4-fY-KH3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YZN-Wt-ka5"/>
                 <constraint firstItem="Eu4-fY-KH3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YvP-vT-UAs"/>
                 <constraint firstAttribute="trailing" secondItem="Eu4-fY-KH3" secondAttribute="trailing" id="dPp-YV-5Az"/>

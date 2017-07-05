@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BackgroundImageSettingCollectionViewCell" id="gTV-IL-0wX" customClass="BackgroundImageSettingCollectionViewCell" customModule="AgilePoker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="anl-38-jcd">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="anl-38-jcd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SKo-z5-awO"/>
+                <constraint firstAttribute="bottom" secondItem="anl-38-jcd" secondAttribute="bottom" id="XQC-er-zVa"/>
+                <constraint firstItem="anl-38-jcd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pMU-Ll-IzN"/>
+                <constraint firstAttribute="trailing" secondItem="anl-38-jcd" secondAttribute="trailing" id="zbG-cu-tYQ"/>
+            </constraints>
+            <size key="customSize" width="151" height="160"/>
+            <connections>
+                <outlet property="imageView" destination="anl-38-jcd" id="rqM-pE-GQU"/>
+            </connections>
+            <point key="canvasLocation" x="-16.5" y="109"/>
+        </collectionViewCell>
+    </objects>
+</document>

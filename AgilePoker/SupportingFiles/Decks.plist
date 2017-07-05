@@ -2,8 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Fibonacci</string>
-	<string>TShirt</string>
-	<string>Pivotal</string>
+	<dict>
+		<key>name</key>
+		<string>Fibonacci</string>
+		<key>display</key>
+        <string>Fibonacci: 0, 1/2, 1, 2, 3, 5...</string>
+	</dict>
+    <dict>
+        <key>name</key>
+        <string>TShirt</string>
+        <key>display</key>
+        <string>XS, S, M, L, XL, ?</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Pivotal</string>
+        <key>display</key>
+        <string>0, 1, 2, 3</string>
+    </dict>
 </array>
 </plist>
