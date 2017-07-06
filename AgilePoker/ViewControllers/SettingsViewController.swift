@@ -11,13 +11,13 @@ import UIKit
 class SettingsViewController: UIViewController {
     @IBOutlet var settingsView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var deckPicker: UIPickerView!
     @IBOutlet weak var backgroundCollectionView: UICollectionView!
+    @IBOutlet weak var deckTableView: UITableView!
 
     static let deckIndexSetting = "deckIndex"
     static let backgroundImageIndexSetting = "backgroundImageIndex"
     
-    var decks: Array<String> = []
+    var decks: Array<Dictionary<String, AnyObject>> = []
     var images: Array<String> = []
     
     override func viewDidLoad() {
@@ -35,11 +35,13 @@ class SettingsViewController: UIViewController {
         
         setupDeckPicker()
 
-        self.deckPicker.dataSource = self
-        self.deckPicker.delegate = self
-        
+        self.deckTableView.dataSource = self
+        self.deckTableView.delegate = self
+        self.deckTableView.register(DeckTableViewCell.self, forCellReuseIdentifier: "DeckCell")
+
         let deckIndex = UserDefaults.standard.integer(forKey: SettingsViewController.deckIndexSetting)
-        self.deckPicker.selectRow(deckIndex, inComponent: 0, animated: true)
+        let indexPath = IndexPath(row: deckIndex, section: 0)
+        self.deckTableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,7 +61,11 @@ class SettingsViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         // save settings
-        let deckIndex = self.deckPicker.selectedRow(inComponent: 0)
+        if let deckIndex = self.deckTableView.indexPathForSelectedRow?.row {
+            UserDefaults.standard.set(deckIndex, forKey: SettingsViewController.deckIndexSetting)
+            MessageBroker.sharedMessageBroker.publish(SettingsMessage.deckIndex(deckIndex))
+        }
+        
         let selectedItems = self.backgroundCollectionView.indexPathsForSelectedItems
         if selectedItems != nil && selectedItems!.count > 0 {
             let selectedItem = selectedItems![0]
@@ -67,8 +73,6 @@ class SettingsViewController: UIViewController {
             UserDefaults.standard.set(selectedImageIndex, forKey: SettingsViewController.backgroundImageIndexSetting)
             MessageBroker.sharedMessageBroker.publish(SettingsMessage.backgroundImageIndex(selectedImageIndex))
         }
-        UserDefaults.standard.set(deckIndex, forKey: SettingsViewController.deckIndexSetting)
-        MessageBroker.sharedMessageBroker.publish(SettingsMessage.deckIndex(deckIndex))
         
         UserDefaults.standard.synchronize()
     }
@@ -92,13 +96,7 @@ class SettingsViewController: UIViewController {
     }
     
     func setupDeckPicker() {
-        decks = []
-        let array = SettingsViewController.loadDecksPlist()
-        for item in array {
-            if let display = item["display"] as? String {
-                self.decks.append(display)
-            }
-        }
+        decks = SettingsViewController.loadDecksPlist()
     }
     
     // MARK: Misc
@@ -124,6 +122,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
+/*
 extension SettingsViewController: UIPickerViewDelegate {
     //MARK: UIPickerViewDelegate
 
@@ -145,7 +144,58 @@ extension SettingsViewController: UIPickerViewDataSource {
         return decks[row]
     }
 }
+*/
 
+extension SettingsViewController: UITableViewDelegate {
+    //MARK: UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    /*
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+    }
+     */
+}
+
+extension SettingsViewController: UITableViewDataSource {
+    //MARK: UITableViewDataSource
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return decks.count
+    }
+    
+    func tableView(_ cellForRowAttableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = cellForRowAttableView.dequeueReusableCell(withIdentifier: "DeckCell", for: indexPath) as! DeckTableViewCell
+        
+        let deck = decks[indexPath.row]
+        
+        cell.textLabel?.text = deck["name"] as? String ?? ""
+        cell.detailTextLabel?.text = deck["description"] as? String ?? ""
+        return cell
+    }
+}
 
 extension SettingsViewController: UICollectionViewDataSource {
     //MARK: UICollectionViewDataSource
@@ -198,6 +248,25 @@ extension SettingsViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout colletionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20.0
+    }
+}
+
+class DeckTableViewCell : UITableViewCell {
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
+        super.init(style: UITableViewCellStyle.subtitle, reuseIdentifier: "DeckCell")
+        self.backgroundColor = UIColor(hexColor: 0x0971B2)
+        
+        let selectionColor = UIView()
+        selectionColor.backgroundColor = UIColor(hexColor: 0xFFFC19) // 0x1485CC)
+        self.selectedBackgroundView = selectionColor;
+
+        self.layer.cornerRadius = 7;
+        self.layer.masksToBounds = true;
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }

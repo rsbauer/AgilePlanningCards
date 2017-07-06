@@ -5,20 +5,20 @@
 	<dict>
 		<key>name</key>
 		<string>Fibonacci</string>
-		<key>display</key>
-        <string>Fibonacci: 0, 1/2, 1, 2, 3, 5...</string>
+		<key>description</key>
+		<string>0, 1/2, 1, 2, 3, 5, 8, 13, 20, 40, Infinity, ?, Coffee</string>
 	</dict>
-    <dict>
-        <key>name</key>
-        <string>TShirt</string>
-        <key>display</key>
-        <string>XS, S, M, L, XL, ?</string>
-    </dict>
-    <dict>
-        <key>name</key>
-        <string>Pivotal</string>
-        <key>display</key>
-        <string>0, 1, 2, 3</string>
-    </dict>
+	<dict>
+		<key>name</key>
+		<string>TShirt</string>
+		<key>description</key>
+		<string>XS, S, M, L, XL, ?</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ZeroToThree</string>
+		<key>description</key>
+		<string>0, 1, 2, 3</string>
+	</dict>
 </array>
 </plist>

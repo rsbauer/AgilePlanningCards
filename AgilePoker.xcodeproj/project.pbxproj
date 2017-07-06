@@ -29,7 +29,7 @@
 		666FD5651EFF4CB700D18DBD /* Decks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666FD5641EFF4CB700D18DBD /* Decks.plist */; };
 		666FD5671EFF4DC400D18DBD /* Fibonacci.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666FD5661EFF4DC400D18DBD /* Fibonacci.plist */; };
 		666FD5691EFF4DD700D18DBD /* TShirt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666FD5681EFF4DD700D18DBD /* TShirt.plist */; };
-		666FD56B1EFF4DE700D18DBD /* Pivotal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666FD56A1EFF4DE700D18DBD /* Pivotal.plist */; };
+		666FD56B1EFF4DE700D18DBD /* ZeroToThree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666FD56A1EFF4DE700D18DBD /* ZeroToThree.plist */; };
 		666FD56D1EFF4EEC00D18DBD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FD56C1EFF4EEC00D18DBD /* Card.swift */; };
 		66785EC71F0C6AC600A5DEB3 /* MessageBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66785EC61F0C6AC600A5DEB3 /* MessageBroker.swift */; };
 		66785ECA1F0C6B0300A5DEB3 /* SettingsMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66785EC91F0C6B0300A5DEB3 /* SettingsMessage.swift */; };
@@ -87,7 +87,7 @@
 		666FD5641EFF4CB700D18DBD /* Decks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Decks.plist; path = SupportingFiles/Decks.plist; sourceTree = "<group>"; };
 		666FD5661EFF4DC400D18DBD /* Fibonacci.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Fibonacci.plist; path = SupportingFiles/Fibonacci.plist; sourceTree = "<group>"; };
 		666FD5681EFF4DD700D18DBD /* TShirt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TShirt.plist; path = SupportingFiles/TShirt.plist; sourceTree = "<group>"; };
-		666FD56A1EFF4DE700D18DBD /* Pivotal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Pivotal.plist; path = SupportingFiles/Pivotal.plist; sourceTree = "<group>"; };
+		666FD56A1EFF4DE700D18DBD /* ZeroToThree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ZeroToThree.plist; path = SupportingFiles/ZeroToThree.plist; sourceTree = "<group>"; };
 		666FD56C1EFF4EEC00D18DBD /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Models/Card.swift; sourceTree = "<group>"; };
 		66785EC61F0C6AC600A5DEB3 /* MessageBroker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageBroker.swift; path = Helpers/MessageBroker.swift; sourceTree = "<group>"; };
 		66785EC91F0C6B0300A5DEB3 /* SettingsMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsMessage.swift; path = Models/MessageBrokerModels/SettingsMessage.swift; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 				666FD5641EFF4CB700D18DBD /* Decks.plist */,
 				666FD5661EFF4DC400D18DBD /* Fibonacci.plist */,
 				666FD5681EFF4DD700D18DBD /* TShirt.plist */,
-				666FD56A1EFF4DE700D18DBD /* Pivotal.plist */,
+				666FD56A1EFF4DE700D18DBD /* ZeroToThree.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -459,7 +459,7 @@
 				664C587B1EFED214007C5085 /* MainViewController.xib in Resources */,
 				66AFF5021F0012720025A5FD /* CardViewController.xib in Resources */,
 				66785ECC1F0C76FE00A5DEB3 /* AppBackgroundImages.plist in Resources */,
-				666FD56B1EFF4DE700D18DBD /* Pivotal.plist in Resources */,
+				666FD56B1EFF4DE700D18DBD /* ZeroToThree.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
