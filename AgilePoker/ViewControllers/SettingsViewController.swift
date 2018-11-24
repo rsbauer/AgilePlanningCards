@@ -49,7 +49,7 @@ class SettingsViewController: UIViewController {
         
         let backgroundImageIndex = UserDefaults.standard.integer(forKey: SettingsViewController.backgroundImageIndexSetting)
         let indexPath = IndexPath(item: backgroundImageIndex, section: 0)
-        self.backgroundCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: UICollectionViewScrollPosition.centeredHorizontally)
+        self.backgroundCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: UICollectionView.ScrollPosition.centeredHorizontally)
     }
 
     override func didReceiveMemoryWarning() {
@@ -253,8 +253,8 @@ extension SettingsViewController : UICollectionViewDelegateFlowLayout {
 
 class DeckTableViewCell : UITableViewCell {
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
-        super.init(style: UITableViewCellStyle.subtitle, reuseIdentifier: "DeckCell")
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String!) {
+        super.init(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "DeckCell")
         self.backgroundColor = UIColor(hexColor: 0x0971B2)
         
         let selectionColor = UIView()

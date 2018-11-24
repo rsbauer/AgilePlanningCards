@@ -65,7 +65,7 @@ class MainViewController: UIViewController {
     }
     
     func setupSettingsButton() {
-        actionButton.setTitle("", for: UIControlState.normal)
+        actionButton.setTitle("", for: UIControl.State.normal)
         actionButton.titleLabel?.font = UIFont(name: "FontAwesome", size: 24)
         actionButton.setTitleColor(UIColor.lightGray, for: .normal)
         
@@ -82,7 +82,7 @@ class MainViewController: UIViewController {
         actionButton.addTarget(self, action: #selector(didTapSettings), for: .touchUpInside)
     }
     
-    func didTapSettings() {
+    @objc func didTapSettings() {
         let settingsViewController = SettingsViewController()
         let navigationController = UINavigationController(rootViewController: settingsViewController)
         settingsViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(settingsCancel))
@@ -90,7 +90,7 @@ class MainViewController: UIViewController {
         present(navigationController, animated: true)
     }
     
-    func settingsCancel() {
+    @objc func settingsCancel() {
         dismiss(animated: true, completion: nil)
     }
     
@@ -176,7 +176,7 @@ extension MainViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let view =  collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "UICollectionViewCell", for: indexPath) as UIView
+        let view =  collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "UICollectionViewCell", for: indexPath) as UIView
         return view as! UICollectionReusableView
     }
 }

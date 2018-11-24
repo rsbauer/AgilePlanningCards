@@ -32,20 +32,6 @@ class CardViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		/*
-        scrollView = UIScrollView(frame: view.bounds)
-        scrollView.contentSize = .init(width: view.bounds.width, height: view.bounds.height * 10)
-        view.addSubview(scrollView)
-        
-        let pan = UIPanGestureRecognizer()
-
-		pan.delegate = transitionController.topEdgeDismisserDelegate(for: scrollView)
-		transitionController.dismissWhenGestureRecognizerBegins(pan)
-		
-        scrollView.panGestureRecognizer.require(toFail: pan)
-        view.addGestureRecognizer(pan)
-        */
-		
 		let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleSingleTap))
 		tap.numberOfTapsRequired = 1
 		tap.delegate = self
@@ -84,7 +70,7 @@ class CardViewController: UIViewController, UIGestureRecognizerDelegate {
         // Dispose of any resources that can be recreated.
     }
 	
-	func handleSingleTap(sender: UITapGestureRecognizer) {
+	@objc func handleSingleTap(sender: UITapGestureRecognizer) {
 		self.dismiss(animated: true, completion: nil)
 	}
 }
