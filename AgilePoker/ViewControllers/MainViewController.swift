@@ -17,9 +17,9 @@
 
 import UIKit
 import CocoaLumberjack
-import MaterialMotion
+//import MaterialMotion
 
-class MainViewController: UIViewController, TransitionContextViewRetriever {
+class MainViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -85,7 +85,6 @@ class MainViewController: UIViewController, TransitionContextViewRetriever {
     func didTapSettings() {
         let settingsViewController = SettingsViewController()
         let navigationController = UINavigationController(rootViewController: settingsViewController)
-        navigationController.transitionController.transition = CircularRevealTransition()
         settingsViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(settingsCancel))
         settingsViewController.title = "Settings"
         present(navigationController, animated: true)
@@ -200,104 +199,6 @@ extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         
     }
-}
-
-// MARK: - CircularRevealTransition
-let floodFillOvershootRatio: CGFloat = 1.2
-
-private class CircularRevealTransition: TransitionWithTermination {
-    
-    // TODO: Support for transient views.
-    var floodFillView: UIView!
-    var foreViewLayer: CALayer!
-    
-    func didEndTransition(withContext ctx: TransitionContext, runtime: MotionRuntime) {
-        floodFillView.removeFromSuperview()
-        foreViewLayer.mask = nil
-    }
-    
-    func willBeginTransition(withContext ctx: TransitionContext, runtime: MotionRuntime) -> [Stateful] {
-        foreViewLayer = ctx.fore.view.layer
-        
-        let contextView = ctx.contextView()!
-        
-        floodFillView = UIView()
-        floodFillView.backgroundColor = contextView.backgroundColor
-        floodFillView.layer.cornerRadius = contextView.layer.cornerRadius
-        floodFillView.layer.shadowColor = contextView.layer.shadowColor
-        floodFillView.layer.shadowOffset = contextView.layer.shadowOffset
-        floodFillView.layer.shadowOpacity = contextView.layer.shadowOpacity
-        floodFillView.layer.shadowRadius = contextView.layer.shadowRadius
-        floodFillView.layer.shadowPath = contextView.layer.shadowPath
-        floodFillView.frame = ctx.containerView().convert(contextView.bounds, from: contextView)
-        ctx.containerView().addSubview(floodFillView)
-        
-        let maskLayer = CAShapeLayer()
-        let maskPathBounds = floodFillView.frame.insetBy(dx: 1, dy: 1)
-        maskLayer.path = UIBezierPath(ovalIn: maskPathBounds).cgPath
-        ctx.fore.view.layer.mask = maskLayer
-        
-        // The distance from the center of the context view to the top left of the screen is the desired
-        // radius of the circle fill. If the context view is placed in a different corner of the screen
-        // then this will need to be replaced with an algorithm that determines the furthest corner from
-        // the center of the view.
-        let outerRadius = CGFloat(sqrt(floodFillView.center.x * floodFillView.center.x + floodFillView.center.y * floodFillView.center.y)) * floodFillOvershootRatio
-        
-        let expandedSize = CGSize(width: outerRadius * 2, height: outerRadius * 2)
-        
-        let expansion = tween(back: floodFillView.bounds.size, fore: expandedSize, ctx: ctx)
-        let fadeOut = tween(back: CGFloat(1), fore: CGFloat(0), ctx: ctx)
-        let radius = tween(back: floodFillView.layer.cornerRadius, fore: outerRadius, ctx: ctx)
-        
-        let foreShadowPath = CGRect(origin: .zero(), size: expandedSize)
-        let shadowPath = tween(back: floodFillView.layer.shadowPath!, fore: UIBezierPath(ovalIn: foreShadowPath).cgPath, ctx: ctx)
-        
-        let floodLayer = runtime.get(floodFillView).layer
-        runtime.add(expansion, to: floodLayer.size)
-        runtime.add(fadeOut, to: floodLayer.opacity)
-        runtime.add(radius, to: floodLayer.cornerRadius)
-        runtime.add(shadowPath, to: floodLayer.shadowPath)
-        
-        let shiftIn = tween(back: ctx.fore.view.layer.position.y + 40, fore: ctx.fore.view.layer.position.y, ctx: ctx)
-        runtime.add(shiftIn, to: runtime.get(ctx.fore.view).layer.positionY)
-        
-        let maskShiftIn = tween(back: CGFloat(-40), fore: CGFloat(0), ctx: ctx)
-        runtime.add(maskShiftIn, to: runtime.get(maskLayer).positionY)
-        
-        let foreMaskBounds = CGRect(x: floodFillView.center.x - outerRadius,
-                                    y: floodFillView.center.y - outerRadius,
-                                    width: outerRadius * 2,
-                                    height: outerRadius * 2)
-        let maskReveal = tween(back: maskLayer.path!, fore: UIBezierPath(ovalIn: foreMaskBounds).cgPath, ctx: ctx)
-        runtime.add(maskReveal, to: runtime.get(maskLayer).path)
-        
-        runtime.add(Hidden(), to: contextView)
-        
-        return [expansion, fadeOut, radius, shadowPath, shiftIn]
-    }
-    
-    private func tween<T>(back: T, fore: T, ctx: TransitionContext) -> Tween<T> {
-        let values: [T]
-        if ctx.direction.value == .forward {
-            values = [back, fore]
-        } else {
-            values = [fore, back]
-        }
-        return Tween(duration: 0.4 * simulatorDragCoefficient(), values: values)
-    }
-}
-
-private class Hidden: Interaction {
-    deinit {
-        for view in hiddenViews {
-            view.isHidden = false
-        }
-    }
-    func add(to view: UIView, withRuntime runtime: MotionRuntime, constraints: NoConstraints) {
-        view.isHidden = true
-        hiddenViews.insert(view)
-    }
-    var hiddenViews = Set<UIView>()
 }
 
 extension MainViewController: Subscriber {

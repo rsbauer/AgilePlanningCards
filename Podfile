@@ -7,7 +7,7 @@ target 'AgilePoker' do
 
   # Pods for AgilePoker
   pod 'CocoaLumberjack/Swift'
-  pod 'MaterialMotion'
+#  pod 'MaterialMotion'
 
   target 'AgilePokerTests' do
     inherit! :search_paths
