@@ -185,12 +185,10 @@ extension MainViewController: UICollectionViewDelegate {
     //MARK: UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        guard let cell = collectionView.cellForItem(at: indexPath) as? PlayingCardCollectionViewCell else { return }
-
         self.selectedIndexPath = indexPath
-        
+		let card = deck[indexPath.item]
+
         let cardViewController = CardViewController()
-        let card = deck[indexPath.item]
         cardViewController.backgroundImageName = self.backgroundImageName
         cardViewController.card = card
         present(cardViewController, animated: true, completion: nil)
