@@ -65,14 +65,14 @@
 		661F391B1F009C3100CE8D44 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ViewControllers/SettingsViewController.swift; sourceTree = "<group>"; };
 		661F391C1F009C3100CE8D44 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = ViewControllers/SettingsViewController.xib; sourceTree = "<group>"; };
 		661F391F1F00A77A00CE8D44 /* HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexColor.swift; path = Helpers/HexColor.swift; sourceTree = "<group>"; };
-		664C58401EFED185007C5085 /* AgilePoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgilePoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		664C58401EFED185007C5085 /* AgilePlanningCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgilePlanningCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		664C58431EFED185007C5085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		664C584A1EFED185007C5085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		664C584F1EFED185007C5085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		664C58541EFED185007C5085 /* AgilePokerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgilePokerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		664C58541EFED185007C5085 /* AgilePlanningCardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgilePlanningCardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664C58581EFED185007C5085 /* AgilePokerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgilePokerTests.swift; sourceTree = "<group>"; };
 		664C585A1EFED185007C5085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		664C585F1EFED185007C5085 /* AgilePokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgilePokerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		664C585F1EFED185007C5085 /* AgilePlanningCardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgilePlanningCardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664C58631EFED185007C5085 /* AgilePokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgilePokerUITests.swift; sourceTree = "<group>"; };
 		664C58651EFED185007C5085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		664C58781EFED214007C5085 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
@@ -169,9 +169,9 @@
 		664C58411EFED185007C5085 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				664C58401EFED185007C5085 /* AgilePoker.app */,
-				664C58541EFED185007C5085 /* AgilePokerTests.xctest */,
-				664C585F1EFED185007C5085 /* AgilePokerUITests.xctest */,
+				664C58401EFED185007C5085 /* AgilePlanningCards.app */,
+				664C58541EFED185007C5085 /* AgilePlanningCardsTests.xctest */,
+				664C585F1EFED185007C5085 /* AgilePlanningCardsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -330,9 +330,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		664C583F1EFED185007C5085 /* AgilePoker */ = {
+		664C583F1EFED185007C5085 /* AgilePlanningCards */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 664C58681EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePoker" */;
+			buildConfigurationList = 664C58681EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePlanningCards" */;
 			buildPhases = (
 				95282A78D4C6E1A0D358F3A2 /* [CP] Check Pods Manifest.lock */,
 				664C583C1EFED185007C5085 /* Sources */,
@@ -344,14 +344,14 @@
 			);
 			dependencies = (
 			);
-			name = AgilePoker;
+			name = AgilePlanningCards;
 			productName = AgilePoker;
-			productReference = 664C58401EFED185007C5085 /* AgilePoker.app */;
+			productReference = 664C58401EFED185007C5085 /* AgilePlanningCards.app */;
 			productType = "com.apple.product-type.application";
 		};
-		664C58531EFED185007C5085 /* AgilePokerTests */ = {
+		664C58531EFED185007C5085 /* AgilePlanningCardsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 664C586B1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePokerTests" */;
+			buildConfigurationList = 664C586B1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePlanningCardsTests" */;
 			buildPhases = (
 				C576AAC8C37EDE96AA4E3BC3 /* [CP] Check Pods Manifest.lock */,
 				664C58501EFED185007C5085 /* Sources */,
@@ -363,14 +363,14 @@
 			dependencies = (
 				664C58561EFED185007C5085 /* PBXTargetDependency */,
 			);
-			name = AgilePokerTests;
+			name = AgilePlanningCardsTests;
 			productName = AgilePokerTests;
-			productReference = 664C58541EFED185007C5085 /* AgilePokerTests.xctest */;
+			productReference = 664C58541EFED185007C5085 /* AgilePlanningCardsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		664C585E1EFED185007C5085 /* AgilePokerUITests */ = {
+		664C585E1EFED185007C5085 /* AgilePlanningCardsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 664C586E1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePokerUITests" */;
+			buildConfigurationList = 664C586E1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePlanningCardsUITests" */;
 			buildPhases = (
 				E5BAA88C9293EDD75F161B3C /* [CP] Check Pods Manifest.lock */,
 				664C585B1EFED185007C5085 /* Sources */,
@@ -382,9 +382,9 @@
 			dependencies = (
 				664C58611EFED185007C5085 /* PBXTargetDependency */,
 			);
-			name = AgilePokerUITests;
+			name = AgilePlanningCardsUITests;
 			productName = AgilePokerUITests;
-			productReference = 664C585F1EFED185007C5085 /* AgilePokerUITests.xctest */;
+			productReference = 664C585F1EFED185007C5085 /* AgilePlanningCardsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -419,7 +419,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 664C583B1EFED185007C5085 /* Build configuration list for PBXProject "AgilePoker" */;
+			buildConfigurationList = 664C583B1EFED185007C5085 /* Build configuration list for PBXProject "AgilePlanningCards" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -432,9 +432,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				664C583F1EFED185007C5085 /* AgilePoker */,
-				664C58531EFED185007C5085 /* AgilePokerTests */,
-				664C585E1EFED185007C5085 /* AgilePokerUITests */,
+				664C583F1EFED185007C5085 /* AgilePlanningCards */,
+				664C58531EFED185007C5085 /* AgilePlanningCardsTests */,
+				664C585E1EFED185007C5085 /* AgilePlanningCardsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -594,12 +594,12 @@
 /* Begin PBXTargetDependency section */
 		664C58561EFED185007C5085 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 664C583F1EFED185007C5085 /* AgilePoker */;
+			target = 664C583F1EFED185007C5085 /* AgilePlanningCards */;
 			targetProxy = 664C58551EFED185007C5085 /* PBXContainerItemProxy */;
 		};
 		664C58611EFED185007C5085 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 664C583F1EFED185007C5085 /* AgilePoker */;
+			target = 664C583F1EFED185007C5085 /* AgilePlanningCards */;
 			targetProxy = 664C58601EFED185007C5085 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -759,7 +759,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgilePoker.app/AgilePoker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgilePlanningCards.app/AgilePlanningCards";
 			};
 			name = Debug;
 		};
@@ -776,7 +776,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgilePoker.app/AgilePoker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgilePlanningCards.app/AgilePlanningCards";
 			};
 			name = Release;
 		};
@@ -815,7 +815,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		664C583B1EFED185007C5085 /* Build configuration list for PBXProject "AgilePoker" */ = {
+		664C583B1EFED185007C5085 /* Build configuration list for PBXProject "AgilePlanningCards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				664C58661EFED185007C5085 /* Debug */,
@@ -824,7 +824,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		664C58681EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePoker" */ = {
+		664C58681EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePlanningCards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				664C58691EFED185007C5085 /* Debug */,
@@ -833,7 +833,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		664C586B1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePokerTests" */ = {
+		664C586B1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePlanningCardsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				664C586C1EFED185007C5085 /* Debug */,
@@ -842,7 +842,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		664C586E1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePokerUITests" */ = {
+		664C586E1EFED185007C5085 /* Build configuration list for PBXNativeTarget "AgilePlanningCardsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				664C586F1EFED185007C5085 /* Debug */,

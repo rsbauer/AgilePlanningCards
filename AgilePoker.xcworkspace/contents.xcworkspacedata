@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:AgilePoker.xcodeproj">
+      location = "group:/Users/astro/code/ios/AgilePoker/AgilePlanningCards.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
