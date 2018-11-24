@@ -1,0 +1,14 @@
+.DS_Store
+build/
+xcuserdata
+AgilePoker.xcodeproj/project.xcworkspace/xcshareddata/*
+builds
+Pods/
+AgilePoker.xcworkspace
+buildOutput/
+screenshots
+fastlane/report.xml
+fastlane/test_output/
+fastlane/Appfile
+Fastlane/Deliverfile
+DerivedData
