@@ -6,7 +6,7 @@ Agile planning cards, for iOS.  Initial version designed to allow players to hav
 
 Cards | Settings
 --- | ---
-<img src="https://raw.githubusercontent.com/rsbauer/AgilePanningCards/master/images/cards.png" width="600">  | <img src="https://raw.githubusercontent.com/rsbauer/AgilePanningCards/master/images/settings.png" width="600"> 
+<img src="https://raw.githubusercontent.com/rsbauer/AgilePlanningCards/master/images/cards.png" width="600">  | <img src="https://raw.githubusercontent.com/rsbauer/AgilePlanningCards/master/images/settings.png" width="600"> 
 
 ### Getting Started
 
