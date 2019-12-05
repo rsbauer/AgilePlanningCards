@@ -29,7 +29,7 @@ Before starting, you will need Cocoapods installed.
 
   `pod install`
 
-5. Open the ComicReader.xcworkspace
+5. Open the AgilePoker.xcworkspace
 
   `open AgilePoker.xcworkspace`
 
